@@ -10,21 +10,17 @@ import Footer from "./Components/Footer";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
-    return savedTheme === "dark";
+    return savedTheme === "dark" ? true : false; // default to false if savedTheme is not "dark"
   });
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
+    const theme = darkMode ? "dark" : "light";
+    document.body.classList.toggle("dark", darkMode); // Using toggle for better readability
+    localStorage.setItem("theme", theme);
+  }, [darkMode]); // Only re-run when darkMode changes
 
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
+    setDarkMode(prevMode => !prevMode);
   };
 
   return (

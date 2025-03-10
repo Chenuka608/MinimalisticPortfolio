@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,11 @@ const ContactPage = () => {
       [name]: value
     }));
   };
+
+  // Scroll to top when the ContactPage is rendered
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top
+  }, []); // This runs once when the component is mounted
 
   return (
     <div className="px-4 py-8 md:py-12 transition-all dark:bg-gray-900 dark:text-white bg-white text-gray-900">

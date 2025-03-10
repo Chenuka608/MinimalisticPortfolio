@@ -44,7 +44,7 @@ const AboutPage = () => {
           </li>
           <li className="flex items-center">
             <FaGraduationCap className="mr-3" />
-            BEng(Hons) Software Engineering | Informatics Institute of Technology | University of Westminster (2023 - Present)
+            BEng(Hons) Software Engineering 
           </li>
           <li className="flex items-center">
             <FaBirthdayCake className="mr-3" />
@@ -56,7 +56,7 @@ const AboutPage = () => {
     {
       id: "qualifications",
       label: "Qualifications",
-      icon: <FaGraduationCap className="inline-block mr-2 text-base" />,
+      icon: <FaGraduationCap className="inline-block mr-2 text-base " />,
       content: (
         <ul className="space-y-4">
           <li>
@@ -101,10 +101,10 @@ const AboutPage = () => {
         <ul className="space-y-4">
           <li className="flex items-start">
             <FaGamepad className="mr-3" />
-            I'm a fan of tactical FPS games like, <strong>Valorant & PUBG.</strong>
+            I enjoy playing FPS games,
           </li>
           <li className="flex items-start">
-            <FaLaptop className="mr-3" />
+            <FaLaptop className="mr-3 text-2xl" />
             I like to host, maintain, and deploy full-stack web applications.
           </li>
           <li className="flex items-start">
